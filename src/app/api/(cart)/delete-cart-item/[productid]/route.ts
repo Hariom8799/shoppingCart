@@ -1,9 +1,9 @@
 import CartItemModel from "@/models/CartItem";
 import dbConnect from "@/lib/dbConnect";
 
-export async function DELETE(request : Request , {params} : {params : {messageid : string}}){
+export async function DELETE(request : Request , {params} : {params : {productid : string}}){
     await dbConnect();
-    const msgID = params.messageid;
+    const msgID = params.productid;
 
     try{
 

@@ -5,7 +5,7 @@ export async function GET(request : Request){
     await dbConnect();
 
     try{
-        const cartItems = await CartItemModel.find();
+        const cartItems = await CartItemModel.find().populate('product');
 
         if(!cartItems){
             return Response.json({
